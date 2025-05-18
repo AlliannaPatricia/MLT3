@@ -3,36 +3,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MLT3 - Data Analysis Using Pivot Tables</title>
+  <title>MLT3 - Pivot Tables and Dashboard</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <canvas id="sakura-falling"></canvas>
   <div class="sakura-animation"></div>
   <main class="container">
-    <h1>Midterm Lab Task 3 - Data Analysis Using Pivot Tables</h1>
-    <p>This page contains my lab task on analyzing datasets using Pivot Tables in Excel.</p>
+    <h1>Midterm Lab Task 3 - Creating Pivot Table and Dashboard</h1>
+    <p>This page contains my lab activity on analyzing data using Pivot Tables and creating a Dashboard in Excel.</p>
 
     <section>
-      <h2>Data Analysis Steps</h2>
+      <h2>Step 1: Prepared the Data</h2>
       <ul>
-        <li>Imported raw data into Excel</li>
-        <li>Created pivot tables to summarize data</li>
-        <li>Applied filters and slicers for dynamic analysis</li>
-        <li>Calculated summary metrics like sums and averages</li>
-        <li>Visualized data trends with charts</li>
+        <li>Used tables: Sal By Role, Sal By State, Sal By Size</li>
+        <li>Created extra tables to check job sectors</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Step 2: Dashboard Insights</h2>
+      <ul>
+        <li>The state with the most data science jobs</li>
+        <li>The job role with the highest average salary</li>
+        <li>The company size that pays the most</li>
+        <li>The sector with the least and most data science jobs</li>
+        <li>The sector with the lowest and highest average salary</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Step 3: Pivot Tables and Charts</h2>
+      <ul>
+        <li>Grouped salaries by role, state, and company size</li>
+        <li>Created charts to make the data easy to understand</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Step 4: Dashboard Enhancements</h2>
+      <ul>
+        <li>Added slicers to filter by Role, Company Size, and State</li>
+        <li>Used a map chart to show salaries by state</li>
+        <li>Designed a clean and readable dashboard</li>
       </ul>
     </section>
 
     <section class="screenshots">
-      <h2>Raw Data</h2>
-      <img src="images/mlt3_raw.png" alt="Raw Data screenshot" />
+      <h2>Here's the screenshot of my output before I started creating pivot tables and charts (See screenshot)</h2>
+      <img src="images/before.PNG" alt="Before Pivot Table Creation" />
 
-      <h2>Pivot Table</h2>
-      <img src="images/mlt3_pivot.png" alt="Pivot Table screenshot" />
+      <h2>Pivot Table for each analysis</h2>
+      <img src="images/pivottables.png" alt="Pivot Tables Screenshot" />
 
-      <h2>Data Visualization</h2>
-      <img src="images/mlt3_chart.png" alt="Data Visualization screenshot" />
+      <h2>Slicers and Filters</h2>
+      <img src="images/slicers.png" alt="Slicers Screenshot" />
+
+      <h2>Map</h2>
+      <img src="images/map.png" alt="Map Chart Screenshot" />
+
+      <h2>Here's the Final Dashboard Output</h2>
+      <img src="images/finaldashboard.png" alt="Final Dashboard Screenshot" />
     </section>
   </main>
 
@@ -66,7 +97,6 @@
         petal.style.left = `${e.pageX}px`;
         petal.style.top = `${e.pageY}px`;
         document.body.appendChild(petal);
-
         setTimeout(() => petal.remove(), 1000);
       });
     });

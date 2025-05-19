@@ -2,110 +2,221 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MLT3 - Pivot Tables and Dashboard</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Midterm Lab Task 3 - Pivot Table and Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Sawarabi Mincho', serif;
+      background: linear-gradient(135deg, #ffe4e6, #fff0f6);
+      color: #6b495f;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 3rem auto;
+      background-color: rgba(255, 240, 246, 0.95);
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(255, 183, 197, 0.3);
+      padding: 2.5rem 3rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #d6336c;
+      text-shadow: 1px 1px 2px #f9c6d3;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .screenshots img {
+      display: block;
+      margin: 1rem auto 2rem auto;
+      width: 90%;
+      max-width: 600px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(255, 183, 197, 0.4);
+    }
+
+    .petal-trail {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background: radial-gradient(circle at 40% 40%, rgba(255,182,193,0.9), rgba(255,192,203,0.3));
+      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+      pointer-events: none;
+      z-index: 9999;
+      animation: trail-fall 1.5s linear forwards;
+    }
+
+    @keyframes trail-fall {
+      0% {
+        opacity: 1;
+        transform: translateY(0) rotate(0deg);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(40px) rotate(60deg);
+      }
+    }
+  </style>
 </head>
 <body>
-  <canvas id="sakura-falling"></canvas>
-  <div class="sakura-animation"></div>
-  <main class="container">
-    <h1>Midterm Lab Task 3 - Creating Pivot Table and Dashboard</h1>
-    <p>This page contains my lab activity on analyzing data using Pivot Tables and creating a Dashboard in Excel.</p>
+  <canvas id="falling-petals-canvas"></canvas>
+
+  <div class="container">
+    <header>
+      <h1>Midterm Lab Task 3</h1>
+      <h2>Creating PIVOT TABLE and DASHBOARD</h2>
+    </header>
 
     <section>
-      <h2>Step 1: Prepared the Data</h2>
+      <p>
+        In this lab, I worked on organizing and showing data using Pivot Tables and a Dashboard in Excel. The dataset, <strong>Uncleaned_DS_Jobs.csv</strong>, was used to find useful insights about salaries, job roles, and hiring trends in data science.
+      </p>
+    </section>
+
+    <section>
+      <h2>Step 1. Prepared the Data</h2>
       <ul>
         <li>Used tables: Sal By Role, Sal By State, Sal By Size</li>
-        <li>Created extra tables to check job sectors</li>
+        <li>Created extra tables to check job sectors.</li>
       </ul>
     </section>
 
     <section>
-      <h2>Step 2: Dashboard Insights</h2>
+      <h2>Step 2. Created a Dashboard with These Insights:</h2>
       <ul>
-        <li>The state with the most data science jobs</li>
-        <li>The job role with the highest average salary</li>
-        <li>The company size that pays the most</li>
-        <li>The sector with the least and most data science jobs</li>
-        <li>The sector with the lowest and highest average salary</li>
+        <li>The state with the most data science jobs.</li>
+        <li>The job role with the highest average salary.</li>
+        <li>The company size that pays the most.</li>
+        <li>The sector with the least and most data science jobs.</li>
+        <li>The sector with the lowest and highest average salary.</li>
       </ul>
     </section>
 
     <section>
-      <h2>Step 3: Pivot Tables and Charts</h2>
+      <h2>Step 3. Used Pivot Tables and Charts to Show Data</h2>
       <ul>
-        <li>Grouped salaries by role, state, and company size</li>
-        <li>Created charts to make the data easy to understand</li>
+        <li>Made Pivot Tables to group salaries by role, state, and company size.</li>
+        <li>Created charts to make the data easy to understand.</li>
       </ul>
     </section>
 
     <section>
-      <h2>Step 4: Dashboard Enhancements</h2>
+      <h2>Step 4. Made the Dashboard Better</h2>
       <ul>
-        <li>Added slicers to filter by Role, Company Size, and State</li>
-        <li>Used a map chart to show salaries by state</li>
-        <li>Designed a clean and readable dashboard</li>
+        <li>Added slicers to filter data by Role, Company Size, and State.</li>
+        <li>Used a map chart (Excel 2019 and above) to show salaries by state.</li>
+        <li>Designed the dashboard to look clean and easy to read.</li>
       </ul>
     </section>
 
     <section class="screenshots">
-      <h2>Here's the screenshot of my output before I started creating pivot tables and charts (See screenshot)</h2>
-      <img src="images/before.PNG" alt="Before Pivot Table Creation" />
+      <h2>Here's the screenshot of my output before I started creating pivot tables and charts</h2>
+      <img src="images/before.PNG" alt="Before Pivot Tables and Charts" />
 
-      <h2>Pivot Table for each analysis</h2>
-      <img src="images/pivottables.png" alt="Pivot Tables Screenshot" />
+      <h2>Here's the screenshot of my output after I started creating pivot tables and charts</h2>
+      <p>- Pivot Table for each analysis</p>
+      <img src="images/pivottables.png" alt="Pivot Tables" />
 
-      <h2>Slicers and Filters</h2>
-      <img src="images/slicers.png" alt="Slicers Screenshot" />
+      <p>- Slicers and Filters</p>
+      <img src="images/slicers.png" alt="Slicers and Filters" />
 
-      <h2>Map</h2>
-      <img src="images/map.png" alt="Map Chart Screenshot" />
+      <p>- Map</p>
+      <img src="images/map.png" alt="Map Chart" />
 
       <h2>Here's the Final Dashboard Output</h2>
-      <img src="images/finaldashboard.png" alt="Final Dashboard Screenshot" />
+      <img src="images/finaldashboard.png" alt="Final Dashboard" />
     </section>
-  </main>
+  </div>
 
-  <!-- Sakura Falling Animation Script -->
-  <script src="https://cdn.jsdelivr.net/gh/lgarron/sakura/sakura.js"></script>
   <script>
-    const sakura = new Sakura('body', {
-      colors: [
-        {
-          gradientColorStart: 'rgba(255, 183, 197, 0.9)',
-          gradientColorEnd: 'rgba(255, 197, 208, 0.9)',
-          gradientColorDegree: 120
+    // Sakura falling petals canvas setup
+    const canvas = document.getElementById('falling-petals-canvas');
+    const ctx = canvas.getContext('2d');
+    let petals = [];
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+
+    class Petal {
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * -canvas.height;
+        this.size = Math.random() * 10 + 5;
+        this.speed = Math.random() * 2 + 1;
+        this.angle = Math.random() * 2 * Math.PI;
+      }
+
+      update() {
+        this.y += this.speed;
+        this.x += Math.sin(this.angle);
+        if (this.y > canvas.height) {
+          this.y = 0;
+          this.x = Math.random() * canvas.width;
         }
-      ],
-      maxSize: 14,
-      minSize: 9,
-      fallSpeed: 1.2
-    });
-  </script>
+      }
 
-  <!-- Sakura Trail Animation -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const trail = document.createElement("div");
-      trail.className = "sakura-trail";
-      document.body.appendChild(trail);
+      draw() {
+        ctx.fillStyle = 'rgba(255,182,193,0.8)';
+        ctx.beginPath();
+        ctx.ellipse(this.x, this.y, this.size, this.size / 2, this.angle, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
 
-      document.addEventListener("mousemove", function(e) {
-        const petal = document.createElement("div");
-        petal.className = "sakura-petal";
-        petal.style.left = `${e.pageX}px`;
-        petal.style.top = `${e.pageY}px`;
-        document.body.appendChild(petal);
-        setTimeout(() => petal.remove(), 1000);
+    function initPetals() {
+      petals = [];
+      for (let i = 0; i < 100; i++) {
+        petals.push(new Petal());
+      }
+    }
+
+    function animatePetals() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      petals.forEach(petal => {
+        petal.update();
+        petal.draw();
       });
+      requestAnimationFrame(animatePetals);
+    }
+
+    initPetals();
+    animatePetals();
+
+    // Mouse trail petals (scroll-independent)
+    document.addEventListener('mousemove', function(e) {
+      const trail = document.createElement('div');
+      trail.className = 'petal-trail';
+      trail.style.left = e.pageX + 'px';
+      trail.style.top = e.pageY + window.scrollY + 'px';
+      document.body.appendChild(trail);
+      setTimeout(() => trail.remove(), 1500);
     });
   </script>
-
-  <!-- Background Music -->
-  <audio autoplay loop>
-    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_4c73b93344.mp3?filename=serene-view-14757.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
 </body>
 </html>
